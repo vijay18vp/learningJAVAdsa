@@ -158,30 +158,59 @@
 // 	•	It begins with the first two terms: F₀ = 0 and F₁ = 1.
 // 	•	Each subsequent term is Fₙ = Fₙ₋₁ + Fₙ₋₂ (for n > 1).
 
+// public class allQue {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter the number up to which you want the Fibonacci series: ");
+//         int n = sc.nextInt();
+        
+//         if (n <= 0) {
+//             System.out.println("Please enter a positive number greater than 0.");
+//             sc.close();
+//             return;
+//         }
+        
+//         long a = 0;
+//         long b = 1;
+        
+//         System.out.print("Fibonacci series: ");
+//         for (int i = 0; i < n; i++) {
+//             System.out.print(a + " ");
+//             long nextTerm = a + b;
+//             a = b;
+//             b = nextTerm;
+//         }
+//         System.out.println();  // For a clean newline
+        
+//         sc.close();
+//     }
+// }
+
+
+
+
+
+// Que8 - To find out whether the given String is Palindrome or not.
 public class allQue {
-    public static void main(String[] args) {
+      public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number up to which you want the Fibonacci series: ");
-        int n = sc.nextInt();
-        
-        if (n <= 0) {
-            System.out.println("Please enter a positive number greater than 0.");
-            sc.close();
-            return;
+        System.out.print("Enter Whatever you want to check is it Palindrome or Not: ");
+        String input = sc.nextLine();
+
+        String reversedString = reverse(input);
+
+        if (input.equals(reversedString)) {
+            System.out.println("The given string is a Palindrome.");
+        } else {
+            System.out.println("The given string is NOT a Palindrome.");
         }
-        
-        long a = 0;
-        long b = 1;
-        
-        System.out.print("Fibonacci series: ");
-        for (int i = 0; i < n; i++) {
-            System.out.print(a + " ");
-            long nextTerm = a + b;
-            a = b;
-            b = nextTerm;
-        }
-        System.out.println();  // For a clean newline
-        
+
         sc.close();
-    }
+      }
+
+      // Method to reverse a string
+      public static String reverse(String str) {
+          StringBuilder sb = new StringBuilder(str);
+          return sb.reverse().toString();
+      }
 }
