@@ -106,22 +106,82 @@
 
 
 //Que5 - Take 2 numbers as input and print the largest number.
+// public class allQue {
+//       public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter the First number: ");
+//         double num1 = sc.nextDouble();
+//           System.out.print("Enter the Second number: ");
+//         double num2 = sc.nextDouble();
+
+//         if(num1 > num2){
+//             System.out.println("num1 is greater than num2 ");
+//         }else if(num1 < num2 ){
+//             System.out.println("num1 is smaller than num2 ");
+//         }else {
+//            System.out.println("num1 is equal to num2 ");    
+//         }
+
+//         sc.close();
+//       }
+// }
+
+
+
+
+//Que6 - Input currency in rupees and output in USD.
+
+// public class allQue {
+//       public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         //taking input as currency in indian rupees 
+//         System.out.print("Enter The Amount: ");
+//         double rupees = sc.nextDouble();
+        
+//         // to convert it to USD we have to divid by 80 rupees 
+        
+//         double USD = rupees / 80 ;
+//         System.out.println("The " + rupees + " will be " + USD + " dollars");
+//             sc.close();
+//       }
+// }
+
+
+
+
+
+// Que7 - To calculate Fibonassi series upto n 
+
+// The Fibonacci series, also known as the Fibonacci sequence, is a famous mathematical sequence where each number is the sum of the two preceding ones. It typically starts with 0 and 1, though some variations begin with 1 and 1.
+// How the Sequence Works
+// The sequence is defined recursively:
+// 	•	It begins with the first two terms: F₀ = 0 and F₁ = 1.
+// 	•	Each subsequent term is Fₙ = Fₙ₋₁ + Fₙ₋₂ (for n > 1).
+
 public class allQue {
-      public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the First number: ");
-        double num1 = sc.nextDouble();
-          System.out.print("Enter the Second number: ");
-        double num2 = sc.nextDouble();
-
-        if(num1 > num2){
-            System.out.println("num1 is greater than num2 ");
-        }else if(num1 < num2 ){
-            System.out.println("num1 is smaller than num2 ");
-        }else {
-           System.out.println("num1 is equal to num2 ");    
+        System.out.print("Enter the number up to which you want the Fibonacci series: ");
+        int n = sc.nextInt();
+        
+        if (n <= 0) {
+            System.out.println("Please enter a positive number greater than 0.");
+            sc.close();
+            return;
         }
-
+        
+        long a = 0;
+        long b = 1;
+        
+        System.out.print("Fibonacci series: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(a + " ");
+            long nextTerm = a + b;
+            a = b;
+            b = nextTerm;
+        }
+        System.out.println();  // For a clean newline
+        
         sc.close();
-      }
+    }
 }
