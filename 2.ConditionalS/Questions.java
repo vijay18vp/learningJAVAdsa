@@ -34,17 +34,35 @@
 
 //Que3 - Area Of Rectangle Program
 
+// public class Questions {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter the Height : ");
+//         double height = sc.nextDouble();
+//         System.out.println("Enter the Width : ");
+//         double width = sc.nextDouble();
+
+//         double area = width * height ;
+
+//         System.out.println("The Area Of Reactangle is : " + area );
+//         sc.close();
+//  }
+// }
+
+
+
+// Que4 - Perimeter of circle 
+
 public class Questions {
+ 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Height : ");
-        double height = sc.nextDouble();
-        System.out.println("Enter the Width : ");
-        double width = sc.nextDouble();
-
-        double area = width * height ;
-
-        System.out.println("The Area Of Reactangle is : " + area );
+        System.out.println("Enter The radius of The Circle: ");
+        double radius = sc.nextDouble();
+         
+        //I have taken rounded value for PI = 3.14 
+        double perimeterCircle = 2 * 3.14 * radius ;
+        System.out.println("The Perimeter of The Circle is " + perimeterCircle);
         sc.close();
- }
+    }
 }
