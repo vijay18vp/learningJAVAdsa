@@ -53,16 +53,33 @@
 
 // Que4 - Perimeter of circle 
 
-public class Questions {
+// public class Questions {
  
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The radius of The Circle: ");
-        double radius = sc.nextDouble();
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter The radius of The Circle: ");
+//         double radius = sc.nextDouble();
          
-        //I have taken rounded value for PI = 3.14 
-        double perimeterCircle = 2 * 3.14 * radius ;
-        System.out.println("The Perimeter of The Circle is " + perimeterCircle);
-        sc.close();
-    }
+//         //I have taken rounded value for PI = 3.14 
+//         double perimeterCircle = 2 * 3.14 * radius ;
+//         System.out.println("The Perimeter of The Circle is " + perimeterCircle);
+//         sc.close();
+//     }
+// }
+
+
+//Que5 - Input a number and print all the factors of that number (use loops).
+public class Questions {
+      public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number to find factors : ");
+        int num = sc.nextInt();
+
+         for(int i = 1 ; i <= num ; i++){
+            if(num % i == 0){
+                System.out.println(i);
+            }
+         }
+         sc.close();
+      }
 }
