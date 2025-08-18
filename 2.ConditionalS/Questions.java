@@ -69,17 +69,43 @@
 
 
 //Que5 - Input a number and print all the factors of that number (use loops).
-public class Questions {
-      public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number to find factors : ");
-        int num = sc.nextInt();
+// public class Questions {
+//       public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a number to find factors : ");
+//         int num = sc.nextInt();
 
-         for(int i = 1 ; i <= num ; i++){
-            if(num % i == 0){
-                System.out.println(i);
-            }
-         }
-         sc.close();
-      }
+//          for(int i = 1 ; i <= num ; i++){
+//             if(num % i == 0){
+//                 System.out.println(i);
+//             }
+//          }
+//          sc.close();
+//       }
+// }
+
+
+
+//Que6 - Take integer inputs till the user enters 0 and print the sum of all numbers (HINT: while loop)
+
+public class Questions {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int sum = 0;
+        int number;
+
+        System.out.println("Enter numbers (enter 0 to stop): ");
+
+        number = sc.nextInt();   // take first input
+
+        while (number != 0) {    // loop until user enters 0
+            sum += number;       // add to sum
+            number = sc.nextInt(); // take next input
+        }
+
+        System.out.println("Sum of all numbers = " + sum);
+
+        sc.close();
+    }
 }
