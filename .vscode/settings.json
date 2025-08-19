@@ -2,6 +2,7 @@
     "java.project.sourcePaths": [
         "1.IntroForJava",
         "2.ConditionalS",
-        "3.Switches"
+        "3.Switches",
+        "4.Methods"
     ]
 }
