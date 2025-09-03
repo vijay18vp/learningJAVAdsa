@@ -12,5 +12,6 @@ public class hello {
        String name = sc.nextLine();
 
        greet(name);
+       sc.close();
   }
 }
