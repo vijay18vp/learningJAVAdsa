@@ -5,8 +5,8 @@ public class changeValue {
         System.out.println("The value of the marks is before change is :" + marks[0]);
         change(marks);
     }
-    static void change(int[] marks){
-        marks[0] = 100 ;
-        System.out.println("The value of the marks after change is : " + marks[0]);
+    static void change(int[] arr){
+        arr[0] = 100 ;
+        System.out.println("The value of the marks after change is : " + arr[0]);
     }
 }
